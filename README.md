@@ -3,7 +3,7 @@
 
 
 ## Table of Contents
-* [Background] (#background)
+* [Background](#background)
 * [General Info](#general-information)
 * [System Architecture](#system-architecture)
 * [Setup](#setup)
@@ -26,8 +26,11 @@ HL leverages RL agents to learn a shared optimized communication policy in the i
 
 ## Setup
 This folder contains three python files, <strong>"environment.py"</strong>, <strong>"node.py"</strong>, and <strong>"main.py"</strong>. 
+
 <strong>"environment.py"</strong> includes the decentralized learning algorithm, which allows the systems to envolve based on the decisions made by RL agents.
+
 <strong>"node.py"</strong> includes the reinforcement learning algorithm for learning an optimized communication policy based on observations of model parameters and the correlated rewards.
+
 <strong>"main.py"</strong> includes a total of 120 episodes' learning of how to train a local foundation model to achieve a desired goal within the minimum steps and with less communication cost. Each episode consists of a whole training process of the decentralized learning algorithm.
 
 To start using Homogeneous Learning:
