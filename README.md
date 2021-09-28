@@ -21,7 +21,7 @@ Homogeneous Learning (HL) is a decentralized learning model for tackling non-IID
 ## System Architecture
 HL leverages RL agents to learn a shared optimized communication policy in the inner loop of model training, thus contributing to a fast convergence of training and reduced communication cost. Each node has two machine learning (ML) models, i.e., a node model which we call the local foundation model for a specific ML task and a RL model for the decision-making of peer-to-peer communications.
 
-<img src="fig1.png" width="50%"/>
+<img src="architecture.png" width="50%"/>
 
 
 ## Setup
