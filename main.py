@@ -1,18 +1,16 @@
 import numpy as np
-from keras import backend, losses
+from tensorflow.keras import backend, losses
 from collections import deque
 import random
-import pandas as pd
 import pickle
-from keras.datasets import mnist
-import keras
+from tensorflow.keras.datasets import mnist
 from tensorflow.keras.layers import Dense, Flatten, InputLayer, Conv2D, MaxPool2D
 from tensorflow.keras.models import Sequential, Model
 from tensorflow.keras.optimizers import Adam
 import tensorflow as tf
 from sklearn.utils import shuffle
 from sklearn.decomposition import PCA
-from keras.utils.np_utils import to_categorical
+from tensorflow.keras.utils.np_utils import to_categorical
 from node import * 
 from environment import *
 
