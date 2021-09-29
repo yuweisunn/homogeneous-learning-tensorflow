@@ -51,9 +51,9 @@ There are two components in HL, the decentralized learning system in the file of
 
 <strong>"node.py"</strong> includes the reinforcement learning algorithm for learning an optimized communication policy based on observations of model parameters and the correlated rewards.
 
-The HL systems can be run from the terminal by typing:
-  $sudo python3 main.py
-  
+The HL systems can be run from the terminal by simply typing:
+    $ sudo python3 main.py
+    
 Note that <strong>"main.py"</strong> will include a total of 120 episodes' learning of how to train a local foundation model to achieve a desired goal within the minimum steps, and at the same time with less communication cost, where each episode includes a whole training procedure of the decentralized learning algorithm.
 
 ### Making changes
