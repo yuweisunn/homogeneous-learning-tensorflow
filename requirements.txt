@@ -1,5 +1,5 @@
 numpy
-collection
+collections
 random
 pickle
 sklearn
