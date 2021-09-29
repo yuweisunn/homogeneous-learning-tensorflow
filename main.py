@@ -10,7 +10,7 @@ from tensorflow.keras.optimizers import Adam
 import tensorflow as tf
 from sklearn.utils import shuffle
 from sklearn.decomposition import PCA
-from tensorflow.keras.utils.np_utils import to_categorical
+from tensorflow.keras.utils import to_categorical
 from node import * 
 from environment import *
 
