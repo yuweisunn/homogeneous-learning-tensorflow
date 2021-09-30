@@ -1,5 +1,3 @@
 numpy
 collection
-random
-pickle
 sklearn
