@@ -17,7 +17,6 @@ Hyperparameters of DQN agents
 """
 EPISODES = 120
 DISCOUNT = 0.9
-MINIBATCH_SIZE = 128
 # Exploration settings
 epsilon = 1  # Not a constant, going to be decayed
 EPSILON_DECAY = 0.02
