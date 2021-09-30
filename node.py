@@ -1,16 +1,24 @@
-class DQNAgent:
-    def __init__(self):
-        self.state_num = 1
-        self.model = self.create_model()
-        self.replay_memory = deque(maxlen=REPLAY_MEMORY_SIZE)
+from tensorflow.keras.layers import Dense, Flatten, InputLayer, Conv2D, MaxPool2D
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.optimizers import Adam
+from collections import deque
+import random
+import numpy as np
 
-    def create_model(self):
+class DQNAgent:
+    def __init__(self, ACTION_SPACE_SIZE):
+        self.state_num = 1
+        self.REPLAY_MEMORY_SIZE = 50000
+        self.model = self.create_model(ACTION_SPACE_SIZE)
+        self.replay_memory = deque(maxlen=self.REPLAY_MEMORY_SIZE)
+
+    def create_model(self, ACTION_SPACE_SIZE):
         model = Sequential()
         model.add(InputLayer(input_shape=(self.state_num, 100)))
         model.add(Flatten())
         model.add(Dense(units=500, activation="relu"))
         model.add(Dense(units=200, activation="relu"))
-        model.add(Dense(env.ACTION_SPACE_SIZE, activation='linear'))
+        model.add(Dense(ACTION_SPACE_SIZE, activation='linear'))
         model.compile(loss="mse", optimizer=Adam(learning_rate=0.001), metrics=['accuracy'])
 
         return model
