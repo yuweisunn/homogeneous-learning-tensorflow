@@ -11,6 +11,7 @@ class DQNAgent:
         self.REPLAY_MEMORY_SIZE = 50000
         self.model = self.create_model(ACTION_SPACE_SIZE)
         self.replay_memory = deque(maxlen=self.REPLAY_MEMORY_SIZE)
+        self.MINIBATCH_SIZE = 128
 
     def create_model(self, ACTION_SPACE_SIZE):
         model = Sequential()
@@ -31,7 +32,7 @@ class DQNAgent:
     # Trains network every step during episode
     def train(self):
         # Start training only if certain number of samples is already saved
-        if len(self.replay_memory) < MINIBATCH_SIZE:
+        if len(self.replay_memory) < self.MINIBATCH_SIZE:
             return
 
         batch_size = MINIBATCH_SIZE
