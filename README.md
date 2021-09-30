@@ -42,20 +42,20 @@ If you decide to fork, follow the [instructions](https://help.github.com/article
 Make sure you change *YOUR_USER_NAME* to your user name.
 
 ## Running the systems
-There are two components in HL, the decentralized learning system in the file of <strong>"environment.py"</strong>, and the DQN-based RL agent system in the file of <strong>"node.py"</strong>. More detailed information can be found in the Section 3.3 of the Homogeneous Learning paper.
+There are two components in HL, the decentralized learning system in the file of **"environment.py"**, and the DQN-based RL agent system in the file of **"node.py"**. More detailed information can be found in the **Section 3.3** of the Homogeneous Learning paper.
 
-<strong>"environment.py"</strong> includes the decentralized learning algorithm, which allows the systems to envolve based on the decisions made by RL agents.
+**"environment.py"** includes the decentralized learning algorithm, which allows the systems to envolve based on the decisions made by RL agents.
 
-<strong>"node.py"</strong> includes the reinforcement learning algorithm for learning an optimized communication policy based on observations of model parameters and the correlated rewards.
+**"node.py"** includes the reinforcement learning algorithm for learning an optimized communication policy based on observations of model parameters and the correlated rewards.
 
 The HL systems can be run from the terminal by simply typing:
 
     $ sudo python3 main.py
     
-Note that <strong>"main.py"</strong> will include a total of 120 episodes' learning of how to train a local foundation model to achieve a desired goal within the minimum steps, and at the same time with less communication cost, where each episode includes a whole training procedure of the decentralized learning algorithm.
+Note that **"main.py"** will include a total of 120 episodes' learning of how to train a local foundation model to achieve a desired goal within the minimum steps, and at the same time with less communication cost, where each episode includes a whole training procedure of the decentralized learning algorithm.
 
 ### Making changes
-If you want to make changes to the source, such as the total episodes and the training goal, you are going to need to refer to the Section 4.1, 4.2.1, A.2 in the paper for more information on how these components work with each other.
+If you want to make changes to the source, such as the total episodes and the training goal, you are going to need to refer to the **Section 4.1, 4.2.1, A.2** in the paper for more information on how these components work with each other.
 
 
 
