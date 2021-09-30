@@ -12,6 +12,13 @@ class DQNAgent:
         self.model = self.create_model(ACTION_SPACE_SIZE)
         self.replay_memory = deque(maxlen=self.REPLAY_MEMORY_SIZE)
         self.MINIBATCH_SIZE = 128
+        self.DISCOUNT = 0.9
+
+    def normalize(self, v):
+        norm = np.linalg.norm(v)
+        if norm == 0:
+           return v
+        return v / norm 
 
     def create_model(self, ACTION_SPACE_SIZE):
         model = Sequential()
@@ -54,7 +61,7 @@ class DQNAgent:
         for index, (current_state, action, reward, new_current_state, done) in enumerate(minibatch):
             if not done:
                 max_future_q = np.max(future_qs_list[index])
-                new_q = reward + DISCOUNT * max_future_q
+                new_q = reward + self.DISCOUNT * max_future_q
             else:
                 new_q = reward
 
@@ -66,7 +73,7 @@ class DQNAgent:
             X.append(current_state)
             y.append(current_qs)
 
-        y = normalize(y)
+        y = self.normalize(y)
         # Fit on all samples as one batch, log only on terminal state
         self.model.fit(np.array(X), np.array(y), epochs = 1, batch_size=16, verbose=1)
 

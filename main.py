@@ -16,7 +16,6 @@ x_test = (x_test.astype('float32')/255.0).reshape(-1,28,28,1)
 Hyperparameters of DQN agents
 """
 EPISODES = 120
-DISCOUNT = 0.9
 # Exploration settings
 epsilon = 1  # Not a constant, going to be decayed
 EPSILON_DECAY = 0.02
@@ -45,7 +44,11 @@ for episode in range(1, EPISODES + 1):
         round =round+1
         action = []
 
-        if np.random.random() > epsilon:
+        if round == 1: 
+          action = [starter]
+          print("================ %s =================" %action)
+
+        elif np.random.random() > epsilon:
             # Get action from the DQN agent
             inference = agent.get_qs(current_state)
 
@@ -63,10 +66,6 @@ for episode in range(1, EPISODES + 1):
                   action.append(temp_action)
                   j = j - 1
             print("================ %s =================" %action)
-
-        if round == 1: 
-          action = [starter]
-          print("================ %s =================" %action)
 
 
         new_state, reward, done = env.step(former_action, action)
