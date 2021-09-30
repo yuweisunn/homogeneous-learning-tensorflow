@@ -28,7 +28,7 @@ You will need [Python 3](https://www.python.org/downloads/) and [Tensorflow 2](h
 
 Set up other modules and libraries dependencies, use:
 
-    $ sudo pip3 install -r requirements.txt
+    sudo pip3 install -r requirements.txt
 
 
 ### Forking or cloning
@@ -37,7 +37,7 @@ Consider ***forking*** the project if you want to make changes to the sources. I
 #### Forking
 If you decide to fork, follow the [instructions](https://help.github.com/articles/fork-a-repo) given by github. After that you can clone your own copy of the sources with:
 
-    $ git clone https://github.com/YOUR_USER_NAME/homogeneous-learning.git
+    git clone https://github.com/YOUR_USER_NAME/homogeneous-learning.git
 
 Make sure you change *YOUR_USER_NAME* to your user name.
 
@@ -50,7 +50,7 @@ There are two components in HL, the decentralized learning system in the file of
 
 The HL systems can be run from the terminal by simply typing:
 
-    $ sudo python3 main.py
+    sudo python3 main.py
     
 Note that **"main.py"** will include a total of 120 episodes' learning of how to train a local foundation model to achieve a desired goal within the minimum steps, and at the same time with less communication cost, where each episode includes a whole training procedure of the decentralized learning algorithm.
 
