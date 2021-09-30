@@ -3,18 +3,15 @@
 
 
 ## Table of Contents
-* [Background](#background)
 * [General information](#general-information)
 * [System architecture](#system-architecture)
 * [Setup instructions](#setup-instructions)
 * [Running the systems](#running-the-systems)
 
 
-## Background
+## General information
 Federated learning (FL) has been facilitating privacy-preserving deep learning in many walks of life such as medical image classification, network intrusion detection, and so forth. Whereas it necessitates a central parameter server for model aggregation, which brings about delayed model communication and vulnerability to adversarial attacks. A fully decentralized architecture like Swarm Learning allows peer-to-peer communication among distributed nodes, without the central server. One of the most challenging issues in decentralized deep learning is that data owned by each node are usually non-independent and identically distributed (non-IID), causing time-consuming convergence of model training.　
 
-
-## General information
 Homogeneous Learning (HL) is a decentralized learning model for tackling non-IID data with a self-attention mechanism. In HL, training performs on each round’s selected node, and then the trained model is sent and further processed by the next round’s selected node. Notably, for the selection, the self-attention mechanism leverages reinforcement learning (RL) to observe a node’s inner state and its surrounding environment’s state, thus finding out which one should be selected at each step to optimize the training.
 
 
