@@ -35,7 +35,7 @@ class DQNAgent:
         if len(self.replay_memory) < self.MINIBATCH_SIZE:
             return
 
-        batch_size = MINIBATCH_SIZE
+        batch_size = self.MINIBATCH_SIZE
         # Get a minibatch of random samples from memory replay table
         np.random.shuffle(self.replay_memory)
         minibatch = random.sample(self.replay_memory, batch_size)
