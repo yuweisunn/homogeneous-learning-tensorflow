@@ -24,7 +24,6 @@ for i in range(10):
 class Env:
     def __init__(self):
         self.client_num = 10
-        self.OBSERVATION_SPACE_VALUES = (1, 100, 1)
         self.ACTION_SPACE_SIZE = self.client_num
         self.client_list = []
         self.data_list = []

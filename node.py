@@ -21,7 +21,7 @@ class DQNAgent:
 
     def create_model(self, ACTION_SPACE_SIZE):
         model = Sequential()
-        model.add(InputLayer(input_shape=(100)))
+        model.add(InputLayer(input_shape=(1, 100)))
         model.add(Flatten())
         model.add(Dense(units=500, activation="relu"))
         model.add(Dense(units=200, activation="relu"))
@@ -46,11 +46,11 @@ class DQNAgent:
         np.random.shuffle(self.replay_memory)
         minibatch = random.sample(self.replay_memory, batch_size)
         # Get current states from minibatch, then query NN model for Q values
-        current_states = np.array([transition[0] for transition in minibatch])
+        current_states = np.array(([transition[0] for transition in minibatch]))
         current_qs_list = self.model.predict(current_states)
 
         # Get future states from minibatch, then query NN model for Q values
-        new_current_states = np.array([transition[3] for transition in minibatch])
+        new_current_states = np.array(([transition[3] for transition in minibatch]))
         future_qs_list = self.model.predict(new_current_states)
 
         X = []
@@ -74,7 +74,7 @@ class DQNAgent:
 
         y = self.normalize(y)
         # Fit on all samples as one batch
-        self.model.fit(np.array(X), np.array(y), epochs = 1, batch_size=16, verbose=1)
+        self.model.fit(np.array((X)), np.array((y)), epochs = 1, batch_size=16, verbose=1)
 
     # Query for Q values given current observation
     def get_qs(self, state):

@@ -4,8 +4,6 @@ from tensorflow.keras.datasets import mnist
 from node import * 
 from environment import *
 
-np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning) 
-
 """The Task for the AI
 Our goal is to construct and train a local foundation model 
 on thousands of images of handwritten digits so that it can 
@@ -88,7 +86,7 @@ for episode in range(1, EPISODES + 1):
 
         # Every step we update replay memory
         if round >1:
-          agent.update_replay_memory((current_state.reshape(-1, 100), action, reward, new_state.reshape(-1, 100), done))
+          agent.update_replay_memory((current_state, action, reward, new_state, done))
 
         # Transform new state and count reward
         current_state = new_state
