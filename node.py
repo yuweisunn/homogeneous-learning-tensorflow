@@ -5,24 +5,23 @@ from collections import deque
 import random
 import numpy as np
 
+"""DQN Agent
+This file includes the reinforcement learning algorithm for 
+learning an optimized communication policy based on observations 
+of model parameters and the correlated rewards.
+"""
+
 class DQNAgent:
     def __init__(self, ACTION_SPACE_SIZE):
-        self.state_num = 1
-        self.REPLAY_MEMORY_SIZE = 50000
+        self.REPLAY_MEMORY_SIZE = 50000  
         self.model = self.create_model(ACTION_SPACE_SIZE)
         self.replay_memory = deque(maxlen=self.REPLAY_MEMORY_SIZE)
         self.MINIBATCH_SIZE = 128
-        self.DISCOUNT = 0.9
-
-    def normalize(self, v):
-        norm = np.linalg.norm(v)
-        if norm == 0:
-           return v
-        return v / norm 
+        self.DISCOUNT = 0.9 # Discount for future rewards
 
     def create_model(self, ACTION_SPACE_SIZE):
         model = Sequential()
-        model.add(InputLayer(input_shape=(self.state_num, 100)))
+        model.add(InputLayer(input_shape=(100)))
         model.add(Flatten())
         model.add(Dense(units=500, activation="relu"))
         model.add(Dense(units=200, activation="relu"))
@@ -36,7 +35,7 @@ class DQNAgent:
     def update_replay_memory(self, transition):
         self.replay_memory.append(transition)
 
-    # Trains network every step during episode
+    # Trains network every episode
     def train(self):
         # Start training only if certain number of samples is already saved
         if len(self.replay_memory) < self.MINIBATCH_SIZE:
@@ -57,7 +56,7 @@ class DQNAgent:
         X = []
         y = []
 
-        # Now we need to enumerate our batches
+        # Enumerate our batches
         for index, (current_state, action, reward, new_current_state, done) in enumerate(minibatch):
             if not done:
                 max_future_q = np.max(future_qs_list[index])
@@ -74,9 +73,15 @@ class DQNAgent:
             y.append(current_qs)
 
         y = self.normalize(y)
-        # Fit on all samples as one batch, log only on terminal state
+        # Fit on all samples as one batch
         self.model.fit(np.array(X), np.array(y), epochs = 1, batch_size=16, verbose=1)
 
-    # Queries network for Q values given current observation
+    # Query for Q values given current observation
     def get_qs(self, state):
-        return self.model.predict(state.reshape(1, 1, 100))[0]
+        return self.model.predict(state.reshape(1, 100))[0]
+
+    def normalize(self, v):
+        norm = np.linalg.norm(v)
+        if norm == 0:
+           return v
+        return v / norm 
