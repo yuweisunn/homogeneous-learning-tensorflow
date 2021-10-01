@@ -26,6 +26,10 @@ This is a quick guide to get started with the sources.
 ### Dependencies 
 You will need [Python 3](https://www.python.org/downloads/) and [Tensorflow 2](https://www.tensorflow.org/install/), to run the systems. 
 
+Upgrade pip to the latest version, use:
+
+    sudo python3 -m pip install --upgrade pip
+    
 Set up other modules and libraries dependencies, use:
 
     sudo pip3 install -r requirements.txt
