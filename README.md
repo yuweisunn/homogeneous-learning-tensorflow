@@ -4,16 +4,6 @@
 ## The Paper
 [Homogeneous Learning: Self-Attention Decentralized Deep Learning](https://arxiv.org/abs/2110.05290)
 
-Cite as:
-
-    @misc{sun2021homogeneous,
-          title={Homogeneous Learning: Self-Attention Decentralized Deep Learning}, 
-          author={Yuwei Sun and Hideya Ochiai},
-          year={2021},
-          eprint={2110.05290},
-          archivePrefix={arXiv},
-          primaryClass={cs.LG}
-    }
 
 ## Table of Contents
 * [General information](#general-information)
