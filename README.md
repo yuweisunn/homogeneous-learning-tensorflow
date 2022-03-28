@@ -2,7 +2,7 @@
 > A self-attention decentralized deep learning algorithm based on reinforcement learning.
 
 ## The Paper
-[Homogeneous Learning: Self-Attention Decentralized Deep Learning](https://arxiv.org/abs/2110.05290)
+[Homogeneous Learning: Self-Attention Decentralized Deep Learning](https://ieeexplore.ieee.org/document/9680704), Yuwei Sun and Hideya Ochiai, IEEE Access (2022).
 
 
 ## Table of Contents
@@ -15,7 +15,7 @@
 ## General information
 Homogeneous Learning (HL) is a decentralized learning model for tackling non-IID data with a self-attention mechanism. HL leverages reinforcement learning (RL) to observe a node’s inner state and its surrounding environment’s state, and find out which node should be selected to optimize the training. Each node in HL has two neural network models, i.e., a node model which we call the local foundation model for a specific ML task and a RL model for the decision-making of model parameters sharing.
 
-<img src="architecture.png" width="80%"/>
+<img src="architecture.png" width="60%"/>
 
 
 ## Setup instructions
