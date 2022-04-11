@@ -1,4 +1,4 @@
-# This is a Tensorflow implementation of the paper [Homogeneous Learning: Self-Attention Decentralized Deep Learning](https://ieeexplore.ieee.org/document/9680704), Yuwei Sun and Hideya Ochiai, IEEE Access (2022).
+## This is a Tensorflow implementation of the paper [Homogeneous Learning: Self-Attention Decentralized Deep Learning](https://ieeexplore.ieee.org/document/9680704), Yuwei Sun and Hideya Ochiai, IEEE Access (2022).
 
 
 ## Table of Contents
