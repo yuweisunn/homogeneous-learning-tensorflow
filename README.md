@@ -54,6 +54,18 @@ Note that **"main.py"** will include a total of 120 episodes' learning of how to
 ### Making changes
 If you want to make changes to the source, such as the total episodes and the training goal, you are going to need to refer to the **Section 4.1, 4.2.1, A.2** in the paper for more information on how these components work with each other.
 
+## Citation
+If this repository is helpful for your research or you want to refer the provided results in this work, you could cite the work using the following BibTeX entry:
+
+```
+@article{sun2022homolearn,
+  author    = {Yuwei Sun and
+               Hideya Ochiai},
+  title     = {Homogeneous Learning: Self-Attention Decentralized Deep Learning},
+  journal   = {IEEE Access},
+  year      = {2021}
+}
+```
 
 ## Further readings
 ### Reward-Based Model Learning 
