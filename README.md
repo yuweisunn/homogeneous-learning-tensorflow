@@ -68,7 +68,7 @@ If this repository is helpful for your research or you want to refer the provide
 ```
 
 ## Further readings
-### Reward-Based Model Learning 
+### Global Workspace Theory
 * [The Consciousness Prior](https://arxiv.org/abs/1709.08568), Yoshua Bengio, arXiv preprint.
 * [Coordination among neural modules through a shared global workspace](https://arxiv.org/abs/2103.01197), Goyal et al., ICLR'22.
 * [GFlowNet Foundations](https://arxiv.org/abs/2111.09266), Bengio et al., arXiv preprint.
