@@ -70,7 +70,8 @@ If this repository is helpful for your research or you want to refer the provide
 ## Further readings
 ### Reward-Based Model Learning 
 * [The Consciousness Prior](https://arxiv.org/abs/1709.08568), Yoshua Bengio, arXiv preprint.
-* [GFlowNet Foundations](https://arxiv.org/abs/2111.09266), Yoshua Bengio et al., arXiv preprint.
+* [Coordination among neural modules through a shared global workspace](https://arxiv.org/abs/2103.01197), Goyal et al., ICLR'22.
+* [GFlowNet Foundations](https://arxiv.org/abs/2111.09266), Bengio et al., arXiv preprint.
 
 ### Decentralized ML
 * [Decentralized Deep Learning for Multi-Access Edge Computing: A Survey on Communication Efficiency and Trustworthiness](https://www.techrxiv.org/articles/preprint/Decentralized_Deep_Learning_for_Multi-Access_Edge_Computing_A_Survey_on_Communication_Efficiency_and_Trustworthiness/16691230), Yuwei Sun et al., IEEE Transactions on Artificial Intelligence.  
