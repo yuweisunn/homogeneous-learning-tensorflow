@@ -9,9 +9,9 @@
 
 
 ## General information
-Homogeneous Learning (HL) is a decentralized learning model for tackling non-IID data with a self-attention mechanism. HL leverages reinforcement learning (RL) to observe a node’s inner state and its surrounding environment’s state, and find out which node should be selected to optimize the training. Each node in HL has two neural network models, i.e., a node model which we call the local foundation model for a specific ML task and a RL model for the decision-making of model parameters sharing.
+Homogeneous Learning (HL) is decentralized neural networks based on the [Global Workspace Theory](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.456.2829&rep=rep1&type=pdf) for fast learning of novel tasks leverging many expert models knowledge. Different from the attention macanism, we leverage reinforcement learning (RL) to generate the meta agent's policy observing its inner state and surrounding environment’s states, such that the systems can quickly adapt to the given tasks. This is the preliminary study of how the human brain can learn new things very fast based on many models of the world.
 
-<img src="architecture.png" width="60%"/>
+<img src="architecture.png" width="50%"/>
 
 
 ## Setup instructions
@@ -26,17 +26,6 @@ Upgrade pip to the latest version, use:
 Set up other modules and libraries dependencies, use:
 
     sudo pip3 install -r requirements.txt
-
-
-### Forking or cloning
-Consider ***forking*** the project if you want to make changes to the sources. If you simply want to run it locally, you can simply ***clone*** it.
-
-#### Forking
-If you decide to fork, follow the [instructions](https://help.github.com/articles/fork-a-repo) given by github. After that you can clone your own copy of the sources with:
-
-    git clone https://github.com/YOUR_USER_NAME/homogeneous-learning.git
-
-Make sure you change *YOUR_USER_NAME* to your user name.
 
 ## Running the systems
 There are two components in HL, the decentralized learning system in the file of **"environment.py"**, and the DQN-based RL agent system in the file of **"node.py"**. More detailed information can be found in the **Section 3.3** of the Homogeneous Learning paper.
