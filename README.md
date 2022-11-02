@@ -11,7 +11,7 @@
 ## General information
 Homogeneous Learning (HL) is decentralized neural networks based on the [Global Workspace Theory](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.456.2829&rep=rep1&type=pdf) for fast learning of novel tasks leverging many expert models knowledge. Different from the attention macanism, we leverage reinforcement learning (RL) to generate the meta agent's policy observing its inner state and surrounding environment’s states, such that the systems can quickly adapt to the given tasks. This is the preliminary study of how the human brain can learn new things very fast based on many models of the world.
 
-<img src="architecture.png" width="50%"/>
+<img src="architecture.png" width="80%"/>
 
 
 ## Setup instructions
