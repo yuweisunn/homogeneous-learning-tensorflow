@@ -21,11 +21,11 @@ You will need [Python 3](https://www.python.org/downloads/) and [Tensorflow 2](h
 
 Upgrade pip to the latest version, use:
 
-    sudo python3 -m pip install --upgrade pip
+    python -m pip install --upgrade pip
     
 Set up other modules and libraries dependencies, use:
 
-    sudo pip3 install -r requirements.txt
+    pip install -r requirements.txt
 
 ## Running the systems
 There are two components in HL, the decentralized learning system in the file of **"environment.py"**, and the DQN-based RL agent system in the file of **"node.py"**. More detailed information can be found in the **Section 3.3** of the Homogeneous Learning paper.
@@ -36,7 +36,7 @@ There are two components in HL, the decentralized learning system in the file of
 
 The HL systems can be run from the terminal by simply typing:
 
-    sudo python3 main.py
+    python main.py
     
 Note that **"main.py"** will include a total of 120 episodes' learning of how to train a local foundation model to achieve a desired goal within the minimum steps, and at the same time with less communication cost, where each episode includes a whole training procedure of the decentralized learning algorithm.
 
